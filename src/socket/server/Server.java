@@ -59,8 +59,8 @@ public class Server extends ServerSocket{
     }
 
     @SuppressWarnings("resource")
-    public static void main(String[] args) {
-        try {
+	public static void main(String[] args) {
+    	try {
             Server server = new Server(CommonUtils.getPort());//创建ServerSocket
             server.run();
         }
@@ -69,5 +69,5 @@ public class Server extends ServerSocket{
                 log.error("服务端已经启动，若需要再次启动请修改端口！");
             }
         }
-    }
+	}
 }

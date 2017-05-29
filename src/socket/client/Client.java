@@ -47,7 +47,11 @@ public class Client extends Socket{
             }
         }
         catch (IOException e) {
-            log.error("创建客户端socket出错：" + e);
+        	if (e.getMessage().contains("Connection refused: connect")) {
+        		log.error("服务器已关闭！");
+        	} else {
+        		log.error("创建客户端socket出错：" + e);
+        	}
         }
         finally {
             StreamUtils.close(client);
