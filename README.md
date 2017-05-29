@@ -6,3 +6,7 @@
 #### 3、服务端每次接受客户端连接请求都创建线程任务加入线程池并执行，该任务将客户端信息顺序存入队列中，当需要输出时，从队列中取出广播到各客户端处。
 #### 4、客户端输入showuser命令可以查看在线用户列表，输入bye向服务器端申请退出连接。
 
+#### demo效果如下:
+
+![image](https://github.com/YuanFY/socket_demo/blob/master/demo.png)
+
